@@ -1,0 +1,29 @@
+<html ng-app="tweetApp">
+	<head>
+		<script src="js/angular/angular.min.js"></script>
+		<script type="text/javascript" src="js/d3/d3.js"></script>
+		<script src="js/data.js"></script>
+		<script>
+			angular.module("tweetApp", []).controller("TweetBot", function(){
+				var controller = this;
+				console.log(tweetData);
+				controller.data = tweetData;
+			});
+		</script>
+	</head>
+	<body ng-controller="TweetBot as tweetBot">
+		<table>
+			<tr ng-repeat="user  in tweetBot.data">
+				<td>{{user.handle}}</td>
+				<td>
+					<ul>
+						<li ng-repeat="tweet in user.tagInfo" style="display:inline-block; padding:15px;">
+							<span>{{tweet.hash}}</span>
+							<span>{{tweet.percentage}}</span>
+						</tr>
+					</ul>
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>
