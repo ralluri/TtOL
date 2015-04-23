@@ -1,0 +1,17 @@
+{
+  "name": "TtOL",
+  "version": "1.0.0",
+  "description": "Tweet to locate",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "twitter"
+  ],
+  "author": "Rajendra Alluri",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.12.3"
+  }
+}
