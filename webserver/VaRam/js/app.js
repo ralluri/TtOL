@@ -14,7 +14,7 @@ var VaRamController = function($tagService) {
 		console.log(controller.words);
 		if(words.length != 0) {
 			jQuery('#tagCloud').jQCloud('update', controller.words);
-			
+			updatePie(controller.tags);
 		}
 		return controller.words;
 	};
